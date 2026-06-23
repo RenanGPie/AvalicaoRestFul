@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Expedição</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Sistema de Expedição</h1>
+
+        <h2>Cadastrar Funcionário</h2>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite o nome"
+        >
+
+        <br>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Digite o e-mail"
+        >
+
+        <br>
+
+        <button onclick="cadastrarFuncionario()">
+            Cadastrar
+        </button>
+
+        <button onclick="listarFuncionarios()">
+            Listar Funcionários
+        </button>
+
+        <h2>Funcionários Cadastrados</h2>
+
+        <ul id="listaFuncionarios"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
