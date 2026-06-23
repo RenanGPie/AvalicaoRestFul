@@ -1,0 +1,16 @@
+1. Abrir o terminal na pasta backend-final
+
+2. Instalar dependências:
+npm install
+
+3. Executar a API:
+npm start
+
+4. Abrir a documentação Swagger:
+http://localhost:3000/api-docs
+
+5. Executar os testes:
+npm test
+
+6. Abrir o frontend:
+Abrir o arquivo frontend/index.html no navegador
