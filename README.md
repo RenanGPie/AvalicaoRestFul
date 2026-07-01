@@ -54,5 +54,3 @@ O projeto possui integração contínua configurada via GitHub Actions:
 Backend CI: Executa automaticamente todos os testes unitários a cada push/pull request.
 
 Frontend CI: Valida o build da interface.
-
-Desenvolvido por Renan Gabriel Piechontcoski
