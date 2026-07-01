@@ -16,7 +16,6 @@ Certifique-se de ter instalado:
 ## ⚙️ Como Executar o Projeto
 
 ### 1. Clonar o repositório
-```bash
 git clone [https://github.com/RenanGPie/AvalicaoRestFul.git](https://github.com/RenanGPie/AvalicaoRestFul.git)
 cd AvalicaoRestFul
 2. Rodar o Back-end
