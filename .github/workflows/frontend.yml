@@ -1,32 +1,30 @@
 name: Frontend CI
 
 on:
-push:
-branches: [ main ]
-pull_request:
-branches: [ main ]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-build:
-runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-```
-defaults:
-  run:
-    working-directory: frontend
+    defaults:
+      run:
+        working-directory: frontend
 
-steps:
-  - name: Baixar código
-    uses: actions/checkout@v4
+    steps:
+      - name: Baixar código
+        uses: actions/checkout@v4
 
-  - name: Instalar Node.js
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  - name: Instalar dependências
-    run: npm install
+      - name: Instalar dependências
+        run: npm install
 
-  - name: Build
-    run: echo "Frontend validado com sucesso"
-```
+      - name: Build
+        run: echo "Frontend validado com sucesso"
