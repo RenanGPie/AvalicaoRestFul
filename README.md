@@ -1,6 +1,6 @@
 # Sistema de Expedição - Projeto N3
 
-Este projeto é uma solução acadêmica desenvolvida para a disciplina de Software Engineering/Sistemas de Informação. O sistema tem como objetivo gerenciar fluxos de expedição, permitindo o cadastro de funcionários, pedidos e veículos, com suporte a relacionamentos complexos entre essas entidades.
+Este projeto é uma solução acadêmica desenvolvida para a disciplina de Software Engineering. O sistema gerencia fluxos de expedição, permitindo o cadastro de funcionários, pedidos e veículos, com suporte a relacionamentos entre essas entidades.
 
 ## 🚀 Tecnologias Utilizadas
 - **Back-end:** Node.js, Express, SQLite3.
@@ -16,8 +16,10 @@ Certifique-se de ter instalado:
 ## ⚙️ Como Executar o Projeto
 
 ### 1. Clonar o repositório
+```bash
 git clone [https://github.com/RenanGPie/AvalicaoRestFul.git](https://github.com/RenanGPie/AvalicaoRestFul.git)
 cd AvalicaoRestFul
+
 2. Rodar o Back-end
 Bash
 cd backend-final
@@ -31,7 +33,7 @@ Abra um novo terminal na raiz do projeto:
 Bash
 cd frontend
 npx serve .
-Acesse o sistema através do endereço exibido no terminal (geralmente http://localhost:3000 ou 3001).
+Acesse o sistema através do endereço exibido no terminal.
 
 🧪 Testes Automatizados
 Para verificar a integridade da API, rode os testes na pasta do back-end:
@@ -52,3 +54,5 @@ O projeto possui integração contínua configurada via GitHub Actions:
 Backend CI: Executa automaticamente todos os testes unitários a cada push/pull request.
 
 Frontend CI: Valida o build da interface.
+
+Desenvolvido por Renan Gabriel Piechontcoski
