@@ -274,11 +274,22 @@ app.post("/funcionarios", (req, res) => {
 });
 
 app.get("/funcionarios", (req, res) => {
-  db.all("SELECT * FROM funcionarios", [], (err, rows) => {
-    if (err) return res.status(500).json(err);
+  const page = parseInt(req.query.page) || 0;
+  const size = parseInt(req.query.size) || 10;
+  const offset = page * size;
 
-    res.json(rows);
-  });
+  db.all(
+    "SELECT * FROM funcionarios LIMIT ? OFFSET ?",
+    [size, offset],
+    (err, rows) => {
+      if (err) return res.status(500).json(err);
+      res.json({
+        content: rows,
+        page: page,
+        size: size
+      });
+    }
+  );
 });
 
 app.get("/funcionarios/:id", (req, res) => {
@@ -345,9 +356,22 @@ app.post("/pedidos", (req, res) => {
 });
 
 app.get("/pedidos", (req, res) => {
-  db.all("SELECT * FROM pedidos", [], (err, rows) => {
-    res.json(rows);
-  });
+  const page = parseInt(req.query.page) || 0;
+  const size = parseInt(req.query.size) || 10;
+  const offset = page * size;
+
+  db.all(
+    "SELECT * FROM pedidos LIMIT ? OFFSET ?", 
+    [size, offset], 
+    (err, rows) => {
+      if (err) return res.status(500).json(err);
+      res.json({
+        content: rows,
+        page: page,
+        size: size
+      });
+    }
+  );
 });
 
 
@@ -372,9 +396,22 @@ app.post("/veiculos", (req, res) => {
 });
 
 app.get("/veiculos", (req, res) => {
-  db.all("SELECT * FROM veiculos", [], (err, rows) => {
-    res.json(rows);
-  });
+  const page = parseInt(req.query.page) || 0;
+  const size = parseInt(req.query.size) || 10;
+  const offset = page * size;
+
+  db.all(
+    "SELECT * FROM veiculos LIMIT ? OFFSET ?", 
+    [size, offset], 
+    (err, rows) => {
+      if (err) return res.status(500).json(err);
+      res.json({
+        content: rows,
+        page: page,
+        size: size
+      });
+    }
+  );
 });
 
 
@@ -399,9 +436,22 @@ app.post("/expedicoes", (req, res) => {
 });
 
 app.get("/expedicoes", (req, res) => {
-  db.all("SELECT * FROM expedicoes", [], (err, rows) => {
-    res.json(rows);
-  });
+  const page = parseInt(req.query.page) || 0;
+  const size = parseInt(req.query.size) || 10;
+  const offset = page * size;
+
+  db.all(
+    "SELECT * FROM expedicoes LIMIT ? OFFSET ?", 
+    [size, offset], 
+    (err, rows) => {
+      if (err) return res.status(500).json(err);
+      res.json({
+        content: rows,
+        page: page,
+        size: size
+      });
+    }
+  );
 });
 
 
